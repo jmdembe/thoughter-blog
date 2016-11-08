@@ -1,0 +1,26 @@
+{
+  "name": "thoughtr-blog",
+  "version": "1.0.0",
+  "description": "The Thoughter Micro Blog was created on November 8, 2016. The blog is an assignment for The Iron Yard Front-End Engineering class.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmdembe/thoughtr-blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmdembe/thoughtr-blog/issues"
+  },
+  "homepage": "https://github.com/jmdembe/thoughtr-blog#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
+}
