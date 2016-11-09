@@ -3,17 +3,20 @@
 
     window.thoughter = window.thoughter || {};
 
-    var thoughtsList = window.thoughter.thoughtsList;
+    var newThoughts = window.thoughter.newThoughts;
 
-    function thoughtsList(message) {
+    /**
+     * Function retrieves a list of all thoughts
+     * @return {Object} [description]
+     */
+    function thoughtsList() {
         return $.ajax({
             url: 'https://thoughter.herokuapp.com/api/Thoughts',
             method: 'GET',
-            data: {
-                'id': Number,
-                'content': String,
-                'createTime': String,
-            }
+            dataType: 'json'
+        })
+        .done(function processThoughts(data){
+
         });
     }
 
