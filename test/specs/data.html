@@ -7,12 +7,23 @@
   </head>
   <body>
       <main id='main'></main>
+
+
+      <!-- library files -->
       <script src='../node_modules/mocha/mocha.js'></script>
       <script src='../node_modules/chai/chai.js'></script>
       <script src='../node_modules/jquery/dist/jquery.js'></script>
+
+      <!-- set up mocha -->
       <script>mocha.setup();</script>
+
+      <!-- source file -->
       <script src='../src/js/data.js'></script>
+
+      <!-- test file -->
       <script src='specs/data.specs.js'></script>
+
+      <!-- run mocha -->
       <script>mocha.run();</script>
 
       </script>
