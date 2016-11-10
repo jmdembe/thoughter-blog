@@ -11,5 +11,4 @@
         $(window.location.hash).show()
     })
 
-    function messageList
 })();
