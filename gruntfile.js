@@ -4,12 +4,12 @@ module.exports = function(grunt) {
     grunt.initConfig({
         clean: ['build/'],
 
-        jshint: { //the task name is defined by plugin
+        jshint: {
             options: {
                 jshintrc: '.jshintrc',
                 ignores: ['node_modules/**']
             },
-            source: { //this target name is arbitrary
+            source: { 
                 files: {
                     src:['src/js/**/*.js']
                 }
@@ -21,11 +21,32 @@ module.exports = function(grunt) {
             }
         },
 
+        copy: {
+          html: {
+            files: [
+              {
+                expand: true,
+                cwd: 'src/',
+                src: [ 'index.html' ],
+                dest: 'build/'
+              }
+            ]
+          },
+          vendorjs: {
+            files: [
+              {
+                expand: true,
+                cwd: 'node_modules/jquery/dist/',
+                src: [ 'jquery.js' ],
+                dest: 'build/js/'
+              }//end of file list for vendorjs
+            ]//files for vendorjs
+          }//vendorjs
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
     grunt.registerTask('test', ['jshint']);
-    grunt.registerTask(['test, clean']);
+    grunt.registerTask('default' ['clean', 'test', 'copy']);
 };
