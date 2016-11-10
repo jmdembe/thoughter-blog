@@ -19,7 +19,9 @@
 
             result
               .done(function() {
-                // do any assertions
+                it('should indicate that the function is completed', function(asyncComplete){
+                    expect(asyncComplete).to.be.a('function'); 
+                })
                 asyncComplete();
               })
               .fail(function() {
