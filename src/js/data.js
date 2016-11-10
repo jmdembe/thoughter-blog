@@ -3,17 +3,18 @@
 
     window.thoughter = window.thoughter || {};
 
-    var newThoughts = window.thoughter.newThoughts;
+    // var thoughtsList = window.thoughter.thoughtsList;
+    window.thoughter.thoughtsList = thoughtsList;
 
     /**
-     * Function retrieves a list of all thoughts
-     * @return {Object} [description]
+     * Purpose: Retrieve a list of all thoughts from the server.
+     * @return {Promise}  The Ajax call promise
      */
     function thoughtsList() {
         return $.ajax({
             url: 'https://thoughter.herokuapp.com/api/Thoughts',
             method: 'GET',
-            dataType: 'json'
+            dataType: 'json',
         })
         .done(function processThoughts(data){
 
