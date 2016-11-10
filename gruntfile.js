@@ -9,7 +9,7 @@ module.exports = function(grunt) {
                 jshintrc: '.jshintrc',
                 ignores: ['node_modules/**']
             },
-            source: { 
+            source: {
                 files: {
                     src:['src/js/**/*.js']
                 }
@@ -46,6 +46,7 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     grunt.registerTask('test', ['jshint']);
     grunt.registerTask('default' ['clean', 'test', 'copy']);
