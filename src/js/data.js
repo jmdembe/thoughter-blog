@@ -11,7 +11,7 @@
      */
     function thoughtsList() {
         return $.ajax({
-            url: 'https://thoughter.herokuapp.com/api/Thoughts',
+            url: 'https://thoughter.herokuapp.com/api/Thoughts?filter={"limit":10}',
             method: 'GET',
             dataType: 'json',
         })
