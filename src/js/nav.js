@@ -4,9 +4,9 @@
     window.thoughter = window.thoughter || {};
 
     window.addEventListener('hashchange', function(event) {
-        $('section').hide()
+        $('section').hide();
         console.log('this works!', window.location.hash);
-        $(window.location.hash).show()
-    })
+        $(window.location.hash).show();
+    });
 
 })();

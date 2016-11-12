@@ -8,18 +8,18 @@ module.exports = function(grunt) {
             options: {
                 jshintrc: '.jshintrc',
                 ignores: ['node_modules/**']
-            },
+            },//end of options for jshint
             source: {
                 files: {
                     src:['src/js/**/*.js']
-                }
-            },
+                }//end of files for src/
+            }, //end of source for jshint
             test: {
                 files: {
                     src: ['test/specs/**/*.js']
-                }
-            }
-        },
+                }//end of files for test/
+            }//end of test information for jshnt
+        },//end of jshint
 
         copy: {
           html: {
@@ -29,9 +29,9 @@ module.exports = function(grunt) {
                 cwd: 'src/',
                 src: [ 'index.html' ],
                 dest: 'build/'
-              }
-            ]
-          },
+              }//end of files for copy
+            ]//end of files for html copy
+          },//end of html information for copy
           vendorjs: {
             files: [
               {
@@ -42,12 +42,13 @@ module.exports = function(grunt) {
               }//end of file list for vendorjs
             ]//files for vendorjs
           }//vendorjs
-    });
+        }//end of copy
+    });//end of init config
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
+    grunt.registerTask('default', ['jshint','clean', 'test', 'copy']);
     grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('default' ['clean', 'test', 'copy']);
 };

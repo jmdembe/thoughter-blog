@@ -16,8 +16,8 @@
             dataType: 'json',
         })
         .done(function processThoughts(data){
-            console.log("Information obtained");
-        });
+            console.log("Information obtained", data);
+        })
         .fail(function processErrorThoughts(xhr) {
             console.log('The submission did not go through', xhr);
             //create module that will process this information onto the page.
