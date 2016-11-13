@@ -2,29 +2,23 @@
     'use strict';
 
     window.thoughter = window.thoughter || {};
-    // window.thoughter.newThought = newThought;
+    window.thoughter.newThought = newThought;
 
-    var content = $('.form-control').val();
-
-    window.addEventListener('submit', function(event){
-      event.preventDefault();
+    function newThought(content) {
       $.ajax({
           url: 'https://thoughter.herokuapp.com/api/Thoughts',
           method: 'POST',
-          data: {
-              "id": Number,
-              "content": content,
-              "createTime": String,
-
+          dataType: 'json',
+          data:JSON.stringify({'content': content}),
+          headers: {
+              'Content-Type': 'application/json'
           }
-          // .done(function processPostSuccess(data) {
-          //    console.log ("post success", data);
-          // })
-          // .fail(function processPostError(xhr) {
-          //    console.log ("Error", xhr);
-          // })
-      });
-      console.log("submit button");
-    });
-
+      })
+      .done (function newThoughtSuccess(data) {
+          console.log(data);
+      })
+      .fail (function newThoughtError(xhr) {
+          console.log('Try again', xhr);
+      })
+    }
 }());

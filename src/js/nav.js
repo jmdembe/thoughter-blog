@@ -9,4 +9,9 @@
         $(window.location.hash).show();
     });
 
+    $('form')
+      .on ('submit', function postThought (event) {
+          event.preventDefault();
+          window.thoughter.newThought($('.form-control').val());
+      })
 })();
