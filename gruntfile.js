@@ -42,13 +42,23 @@ module.exports = function(grunt) {
               }//end of file list for vendorjs
             ]//files for vendorjs
           }//vendorjs
-        }//end of copy
+        },//end of copy
+      mocha: {
+          all: {
+            options: {
+                urls: [
+                    'http://localhost:8080/test/test.html'
+                ]
+            }
+          }
+      }
     });//end of init config
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-mocha');
 
     grunt.registerTask('default', ['jshint','clean', 'test', 'copy']);
-    grunt.registerTask('test', ['jshint']);
+    grunt.registerTask('test', ['jshint', 'mocha']);
 };

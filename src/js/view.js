@@ -12,7 +12,7 @@
 
         listOfThoughts.forEach(function appendingThoughtsToAList (thought) {
             $('ul.thoughts')
-              .append('<li>'+ thought.content+ '</li>')
+              .append('<li>'+ thought.content+'</li>')
         });
 
     }

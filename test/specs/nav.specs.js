@@ -20,12 +20,11 @@
             result
               .done(function() {
                 it('should indicate that the function is completed', function(asyncComplete){
-                    expect(asyncComplete).to.be.a('function'); 
+                    expect(asyncComplete).to.be.a('function');
                 })
                 asyncComplete();
               })
               .fail(function() {
-                // you _might_ do assertions in here...
                 asyncComplete();
               })
 
