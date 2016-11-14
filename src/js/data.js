@@ -2,7 +2,6 @@
     'use strict';
 
     window.thoughter = window.thoughter || {};
-
     window.thoughter.thoughtsList = thoughtsList;
 
     /**
@@ -20,10 +19,9 @@
         })
         .fail(function processErrorThoughts(xhr) {
             console.log('The submission did not go through', xhr);
-            //create module that will process this information onto the page.
+            $('ul')
+              .append('<li>The submission did not go through</li>')
         })
-    }
+      }
 
-
-
-}());
+})();

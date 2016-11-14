@@ -20,5 +20,6 @@
       .fail (function newThoughtError(xhr) {
           console.log('Try again', xhr);
       })
+
     }
 }());
