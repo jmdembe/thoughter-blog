@@ -34,7 +34,7 @@
        */
 
       function newThought(content) {
-        if (typeof(id)!== 'string') {
+        if (typeof(content)!== 'string') {
             var dfdObj = $.Deferred();
             dfdObj.reject('I need content!')
             return dfdObj.promise();

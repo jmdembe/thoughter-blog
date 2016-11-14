@@ -14,13 +14,6 @@
               })
         }
 
-        if(window.location.hash==='#newthoughts') {
-            window.thoughter.newThought($('.form-control').val());
-              .done(function addNewThought (content) {
-                
-              })
-        }
-
     });
 
 })();
