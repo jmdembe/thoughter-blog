@@ -15,12 +15,10 @@
         }
 
         if(window.location.hash==='#newthoughts') {
-            $('form')
-              .on ('submit', function postThought (event) {
-                  event.preventDefault();
-                  window.thoughter.newThought($('.form-control').val());
-            })
-
+            window.thoughter.newThought($('.form-control').val());
+              .done(function addNewThought (content) {
+                
+              })
         }
 
     });

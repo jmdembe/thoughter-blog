@@ -3,6 +3,7 @@
 
     window.thoughter = window.thoughter || {};
     window.thoughter.thoughtsList = thoughtsList;
+    window.thoughter.newThought = newThought;
 
 
     /**
@@ -18,11 +19,10 @@
           dataType: 'json',
       })
       .done(function processThoughts(data){
-          console.log("Information obtained", data);
+
       })
       .fail(function processErrorThoughts(xhr) {
-          console.log('The submission did not go through', xhr);
-          $('ul')
+          console.log('The submission did not go through', xhr);          $('ul')
             .append('<li>The submission did not go through</li>')
         })
       }
