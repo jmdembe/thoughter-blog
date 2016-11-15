@@ -14,15 +14,17 @@
 
     function thoughtsList() {
       return $.ajax({
-          url: 'https://thoughter.herokuapp.com/api/Thoughts?filter={"limit":10}',
+          url: 'https://thoughter.herokuapp.com/api/Thoughts?filter={"limit":10, "order":"createTime DESC"}',
           method: 'GET',
           dataType: 'json',
+
       })
       .done(function processThoughts(data){
 
       })
       .fail(function processErrorThoughts(xhr) {
-          console.log('The submission did not go through', xhr);          $('ul')
+          console.log('The submission did not go through', xhr);
+           $('ul')
             .append('<li>The submission did not go through</li>')
         })
       }
