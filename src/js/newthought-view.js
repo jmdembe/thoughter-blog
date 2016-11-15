@@ -12,10 +12,4 @@
                 console.log('Why are you failing?', xhr);
             })
       })
-
-
-
-
-
-
 }());
