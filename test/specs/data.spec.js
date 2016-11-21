@@ -27,11 +27,7 @@
               .fail(function() {
                 asyncComplete();
               })
-
           });
-
-
         });
-
     });
 }());

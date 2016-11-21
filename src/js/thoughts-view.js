@@ -19,7 +19,7 @@
             .html('')
             .append(
               '<li class=panel panel-primary>'+ thought.content+ thought.date +'</li>'
-            )
+            );
         });
 
     }

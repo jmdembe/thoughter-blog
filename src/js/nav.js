@@ -3,15 +3,15 @@
 
     window.thoughter = window.thoughter || {};
 
-    window.addEventListener('hashchange', function(event) {
+    window.addEventListener('hashchange', function() {
         $('section').hide();
         $(window.location.hash).show();
 
         if(window.location.hash==='#recentthoughts') {
             window.thoughter.thoughtsList()
-              .done(function addContent(data) {
+              .done(function addContent() {
                   window.thoughter.buildThoughts(data);
-              })
+              });
         }
 
 

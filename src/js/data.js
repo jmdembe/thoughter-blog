@@ -19,14 +19,12 @@
           dataType: 'json',
 
       })
-      .done(function processThoughts(data){
 
-      })
       .fail(function processErrorThoughts(xhr) {
           console.log('The submission did not go through', xhr);
            $('ul')
-            .append('<li>The submission did not go through</li>')
-        })
+            .append('<li>The submission did not go through</li>');
+        });
       }
 
       /**
@@ -38,7 +36,7 @@
       function newThought(content) {
         if (typeof(content)!== 'string') {
             var dfdObj = $.Deferred();
-            dfdObj.reject('I need content!')
+            dfdObj.reject('I need content!');
             return dfdObj.promise();
         }
         return $.ajax({
@@ -55,7 +53,7 @@
           })
           .fail (function newThoughtError(xhr) {
               console.log('Try again', xhr);
-          })
+          });
 
         }
 })();
