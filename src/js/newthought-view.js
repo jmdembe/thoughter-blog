@@ -11,5 +11,5 @@
             .fail(function errorHandler(xhr) {
                 console.log('Why are you failing?', xhr);
             });
-      })
+      });
 }());

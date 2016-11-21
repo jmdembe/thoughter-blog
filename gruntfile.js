@@ -43,6 +43,12 @@ module.exports = function(grunt) {
             ]//files for vendorjs
           }//vendorjs
         },//end of copy
+      concat: {
+          js: {
+            src:['src/js/**/*.js'],
+            dest:'build/js/app.js'
+          }
+      },//end of concat
       connect: {
         testing: {
           options: {
@@ -64,10 +70,11 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-mocha');
 
-    grunt.registerTask('default', ['jshint','clean', 'test', 'copy']);
+    grunt.registerTask('default', ['jshint','clean', 'test', 'concat', 'copy']);
     grunt.registerTask('test', ['jshint', 'connect', 'mocha']);
 };

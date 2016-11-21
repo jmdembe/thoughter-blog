@@ -10,7 +10,7 @@
         if(window.location.hash==='#recentthoughts') {
             window.thoughter.thoughtsList()
               .done(function addContent() {
-                  window.thoughter.buildThoughts(data);
+                  window.thoughter.buildThoughts(); //re-insert data if needed
               });
         }
 
