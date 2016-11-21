@@ -44,7 +44,12 @@ module.exports = function(grunt) {
           }//vendorjs
         },//end of copy
       connect: {
-
+        testing: {
+          options: {
+            port: 8888,
+            base: '.'
+          }
+        }
       },//end of connect
       mocha: {
           all: {
