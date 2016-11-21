@@ -43,6 +43,9 @@ module.exports = function(grunt) {
             ]//files for vendorjs
           }//vendorjs
         },//end of copy
+      connect: {
+
+      },//end of connect
       mocha: {
           all: {
             options: {
