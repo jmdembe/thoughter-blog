@@ -3,8 +3,8 @@
 
     var expect = chai.expect;
 
-    describe('Posting a new thought')
-      it('Should connect with the server to post a new thought') {
+    describe('Posting a new thought', function() {
+      it('Should connect with the server to post a new thought', function () {
 
         var result = window.thoughter.newThought();
         expect(result).to.be.an('object');
@@ -31,6 +31,6 @@
           .fail(function() {
             asyncComplete();
           })
-      }
-
-}());
+        })
+      })
+})();

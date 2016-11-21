@@ -21,12 +21,12 @@
               .done(function() {
                 it('should indicate that the function is completed', function(asyncComplete){
                     expect(asyncComplete).to.be.a('function');
-                })
+                });
                 asyncComplete();
               })
               .fail(function() {
                 asyncComplete();
-              })
+              });
           });
         });
     });
