@@ -65,8 +65,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-mocha');
 
     grunt.registerTask('default', ['jshint','clean', 'test', 'copy']);
-    grunt.registerTask('test', ['jshint', 'mocha']);
+    grunt.registerTask('test', ['jshint', 'connect', 'mocha']);
 };
