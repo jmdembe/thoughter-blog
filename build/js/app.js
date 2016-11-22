@@ -69,14 +69,13 @@
 
         if(window.location.hash==='#recentthoughts') {
             window.thoughter.thoughtsList()
-              .done(function addContent() {
-                  window.thoughter.buildThoughts(); //re-insert data if needed
+              .done(function addContent(data) {
+                window.thoughter.buildThoughts(data); //re-insert data if needed
               });
         }
 
 
     });
-
 })();
 
 (function() {

@@ -52,7 +52,7 @@ module.exports = function(grunt) {
       connect: {
         testing: {
           options: {
-            port: 8080,
+            port: 8888,
             base: '.'
           }
         }
@@ -61,10 +61,28 @@ module.exports = function(grunt) {
           all: {
             options: {
                 urls: [
-                    'http://localhost:8080/test/test.html'
+                    'http://localhost:8888/test/test.html'
                 ]
             }
           }
+      },//end of mocha
+      watch: {
+        html: {
+          files: ['src/index.html'],
+          tasks: ['copy:html']
+        },
+        js: {
+          files: ['src/js/**/*.js'],
+          tasks: ['test', 'concat']
+        },
+        sass: {
+          files: ['src/sass/**/*.scss'],
+          tasks: ['sass']
+        },
+        test: {
+          files: ['test/specs/**/*.js'],
+          tasks: ['test']
+        }
       }
     });//end of init config
 
@@ -74,6 +92,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-mocha');
+    grunt.loadNpmTasks('grunt-contrib-watch')
 
     grunt.registerTask('default', ['jshint','clean', 'test', 'concat', 'copy']);
     grunt.registerTask('test', ['jshint', 'connect', 'mocha']);

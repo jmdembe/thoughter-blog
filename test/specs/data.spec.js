@@ -10,7 +10,7 @@
 
       describe('getting list of thoughts', function() {
 
-        it('should obtain list from the server from thoughtsList', function() {
+        it('should obtain list from the server from thoughtsList', function(doneCallback) {
 
           var result = window.thoughter.thoughtsList();
           expect(result).to.be.an('object');
@@ -18,8 +18,9 @@
           expect(result.fail).to.be.a('function');
 
           result
-            .done(function() {
-
+            .done(function handleSuccess(data) {
+              expect(data).to.be.an.instanceof(Array);
+              doneCallback();
             });
         });
       });
