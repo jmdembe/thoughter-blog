@@ -52,7 +52,7 @@ module.exports = function(grunt) {
       connect: {
         testing: {
           options: {
-            port: 8888,
+            port: 8080,
             base: '.'
           }
         }
