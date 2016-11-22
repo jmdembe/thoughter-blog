@@ -13,19 +13,7 @@
 
         result
           .done(function() {
-            it('should indicate that the function is completed', function(asyncComplete){
-                expect(typeof(asyncComplete)).to.be.a('function');
-            });
-
-            it('should use an array to append thoughts as a list item', function (complete){
-              var testArray = function buildThoughts (listOfThoughts);
-
-            });
-
-
-            asyncComplete();
-          .fail(function() {
-            asyncComplete();
+            
           });
         });
       });

@@ -10,7 +10,7 @@
 
       describe('getting list of thoughts', function() {
 
-        it('should obtain list from the server from thoughtsList', function(asyncComplete) {
+        it('should obtain list from the server from thoughtsList', function() {
 
           var result = window.thoughter.thoughtsList();
           expect(result).to.be.an('object');
