@@ -21,7 +21,11 @@
             .done(function handleSuccess(data) {
               expect(data).to.be.an.instanceof(Array);
               doneCallback();
+            })
+            .fail(function handleFail() {
+              doneCallback('OOPS.');
             });
+
         });
       });
   });
