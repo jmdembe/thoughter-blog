@@ -23,7 +23,9 @@
               expect(data).to.be.an.instanceof(Array);
             });
         });
-        it('should post a new thought upon submission', function)
+        it('should post a new thought upon submission', function() {
+
+        });
       });
   });
 }());
