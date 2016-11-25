@@ -10,7 +10,7 @@
 
       describe('getting list of thoughts', function() {
 
-        it('should obtain list from the server from thoughtsList', function(doneCallback) {
+        it('should obtain list from the server from thoughtsList', function() {
 
           var result = window.thoughter.thoughtsList();
           expect(result).to.be.an('object');
@@ -19,14 +19,11 @@
 
           result
             .done(function handleSuccess(data) {
-              expect(data).to.be.an.instanceof(Array);
               doneCallback();
-            })
-            .fail(function handleFail() {
-              doneCallback('OOPS.');
+              expect(data).to.be.an.instanceof(Array);
             });
-
         });
+        it('should post a new thought upon submission', function)
       });
   });
 }());
