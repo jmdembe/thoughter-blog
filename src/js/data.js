@@ -8,7 +8,6 @@
 
     /**
      * function that grabs thoughts from the API
-     * @param  {Number} filter
      * @return {Promise}        Promise from ajax call
      */
 
