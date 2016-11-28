@@ -11,10 +11,10 @@
         });
       });
 
-      xit('Should not add thoughts if there are no thoughts to add', function() {
+      it('Should not add thoughts if there are no thoughts to add', function() {
         window.thoughter.buildThoughts([]); //currently undefined as I wrote a function
         var result= $('ul.list li');
-        expect(buildThoughts.length).to.equal(0);
+        expect(result.length).to.equal(0);
       });
     });
 })();

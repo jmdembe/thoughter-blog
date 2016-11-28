@@ -4,18 +4,15 @@
     window.thoughter = window.thoughter || {};
 
     window.addEventListener('hashchange', function() {
-      $('section').hide();
-      $(window.location.hash).show();
+        $('section').hide();
+        $(window.location.hash).show();
 
-      if(window.location.hash==='#recentthoughts') {
-        window.thoughter.thoughtsList()
-          .done(function addContent(data) {
-            window.thoughter.buildThoughts(data); //re-insert data if needed
-          });
-      }
-      if(window.location.hash==='#newthoughts') {
-        $('#newthoughts').show();
-      }
+        if(window.location.hash==='#recentthoughts') {
+            window.thoughter.thoughtsList()
+              .done(function addContent(data) {
+                window.thoughter.buildThoughts(data);
+              });
+        }
 
 
     });
